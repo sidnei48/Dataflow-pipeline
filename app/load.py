@@ -3,6 +3,8 @@ from app.database import get_connection
 
 def load_data(data):
     """Função de carga dos dados transformados para o banco de dados"""
+    
+    logger.info("Iniciando a carga dos dados.")
 
     conn = None  # Inicializa a variável de conexão para garantir que esteja definida mesmo em caso de erro
 
