@@ -20,7 +20,7 @@ def load_data(data):
             id SERIAL PRIMARY KEY,
             temperatura REAL,
             vento REAL,
-            data_hora TEXT
+            data_hora TIMESTAMP UNIQUE
         )
         """)
 
@@ -31,6 +31,7 @@ def load_data(data):
             """
             INSERT INTO clima (temperatura, vento, data_hora)
             VALUES (%s, %s, %s)
+            ON CONFLICT (data_hora) DO NOTHING
             """,
             (
                 data["temperatura"],
