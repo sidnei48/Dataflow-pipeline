@@ -1,17 +1,20 @@
-Pipeline ETL Meteorológica
+Este projeto tem como objetivo demonstrar conceitos fundamentais de Engenharia de Dados através da construção de uma pipeline ETL completa.
 
-Objetivo -
-O obejetivo dessa pipeline é buscar dados sobre meteorológia, e torna os dados organizados e limpos para ser realizado um estoudo sobre o dados obtidos.
+A aplicação realiza:
 
-Arquitetura -
-API > Transform > SQLite/PstgreSQL . logs
+Extração de dados climáticos em tempo real através da API Open-Meteo
+Transformação e validação dos dados recebidos
+Carga dos dados em banco PostgreSQL
+Registro detalhado de logs da execução
+Controle de duplicidade dos registros
 
-Tecnologia - 
-Python
+Arquitetura:
+API Open-Meteo -> Extract -> Transform -> Validate -> Load -> PostgreSQL
+
+Tecnologias Utilizadas:
+Python 3.11
+PostgreSQL 18
+Psycopg 3
 Requests
-SQLite
 Logging
-
-Guia - 
-Execute primeiramente "pip install -r requiremntes.txt"
-"python main.py"
+Git e GitHub
